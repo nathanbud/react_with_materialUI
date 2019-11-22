@@ -15,10 +15,9 @@ const useStyles = makeStyles({
 
 const Footer = (props) =>{
 
-    console.log(useStyles);
 
   const classes = useStyles();
-  console.log(classes);
+ 
 
   const [value, setValue] = React.useState(0);
 
@@ -30,7 +29,7 @@ const Footer = (props) =>{
         <Paper className={classes.root}>
              
         <Tabs
-          value={value}
+          value={0}
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"

@@ -5,31 +5,31 @@ export const exercises = [
         id: 'overhead-press',
         title:'Overhead Press',
         description: 'Delts exercise...',
-        muscle:'shoulders'
+        muscles:'shoulders'
     },
     {
         id: 'dips',
         title:'Dips',
         description: 'Triceps exercise...',
-        muscle:'arms'
+        muscles:'arms'
         },
     {
         id: 'barbell-curls',
         title:'Barbell Curls',
         description: 'Biceps exercise...',
-        muscle:'arms'
+        muscles:'arms'
         },
     {
         id: 'bench-press',
         title:'Bench Press',
         description: 'Chest exercise...',
-        muscle:'chest'
+        muscles:'chest'
         },
     {
         id: 'pull-ups',
         title:'Pull-ups',
         description: 'Back and biceps exercise...',
-        muscle:'back'
+        muscles:'back'
         },
 
 ]

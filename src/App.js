@@ -1,22 +1,46 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import {Header, Footer} from './Components/Layouts'
 import Exercises from './Components/Exercises'
-import {muscles, exercise} from './store.js'
+import {muscles, exercises} from './store.js'
 
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
 
-     <Header/>
+state ={
+  exercises
+  }
 
-      <Exercises/>
+  
 
-     <Footer muscles = {muscles}/>
+  getExercisesByMuscles(){
+    return Object.entries(this.state.exercises.reduce((exercises, exercise)=>{
+      const {muscles} = exercise
+        exercises[muscles] = exercises[muscles] ? [...exercises[muscles], exercise] : [exercise]
 
-    </div>
-  );
-}
+        return exercises
+    }, {})
+    )
+  }
+
+  render(){
+
+    console.log(this.getExercisesByMuscles());
+
+    return (
+      <div className="App">
+  
+       <Header/>
+  
+        <Exercises/>
+  
+       <Footer muscles = {muscles}/>
+  
+      </div>
+    );
+  }
+
+  }
+
 
 export default App;
