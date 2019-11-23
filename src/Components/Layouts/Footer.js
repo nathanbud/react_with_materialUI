@@ -29,15 +29,15 @@ const Footer = (props) =>{
         <Paper className={classes.root}>
              
         <Tabs
-          value={0}
+          value={value}
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
           centered
         >
-            <Tab label="All" />
+            <Tab label="All"  />
        { props.muscles.map((group)=>
-            <Tab label={group} />
+            <Tab label={group} key={Math.random() * 10}/>
         )}
          
           

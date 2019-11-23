@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './App.css';
 import {Header, Footer} from './Components/Layouts'
 import Exercises from './Components/Exercises'
 import {muscles, exercises} from './store.js'
@@ -25,14 +24,14 @@ state ={
 
   render(){
 
-    console.log(this.getExercisesByMuscles());
+    const exercises = this.getExercisesByMuscles();
 
     return (
-      <div className="App">
+      <div>
   
        <Header/>
   
-        <Exercises/>
+        <Exercises exercises = {exercises}/>
   
        <Footer muscles = {muscles}/>
   
@@ -44,3 +43,5 @@ state ={
 
 
 export default App;
+
+
